@@ -19,9 +19,114 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     font-family: var(--font-sans);
+  }
+}
+
+/* ============================================================
+   3D + Motion toolkit — adds depth and life to the flat layout
+   ============================================================ */
+
+/* Perspective container so child cards can rotate in real 3D space */
+.perspective-1000 {
+  perspective: 1200px;
+}
+
+/* Card that tilts toward the cursor (driven by TiltCard.tsx via CSS vars) */
+.tilt-card {
+  transform-style: preserve-3d;
+  transform: rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg)) translateZ(0);
+  transition: transform 0.18s ease-out, box-shadow 0.3s ease-out,
+    opacity 0.7s ease-out, translate 0.7s ease-out;
+  will-change: transform;
+}
+.tilt-card:hover {
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.35);
+}
+/* Children with this class lift off the card surface on hover for layered depth */
+.tilt-layer {
+  transform: translateZ(40px);
+  transition: transform 0.18s ease-out;
+}
+
+/* Moving glare/sheen that sweeps across a card on hover */
+.tilt-glare {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  background: radial-gradient(
+    circle at var(--glare-x, 50%) var(--glare-y, 50%),
+    rgba(255, 255, 255, 0.28),
+    rgba(255, 255, 255, 0) 60%
+  );
+}
+.tilt-card:hover .tilt-glare {
+  opacity: 1;
+}
+
+/* Gentle floating bob for hero imagery / badges */
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+.animate-float {
+  animation: float-y 6s ease-in-out infinite;
+}
+.animate-float-slow {
+  animation: float-y 9s ease-in-out infinite;
+}
+
+/* Slow drifting glow for background ambience */
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.15); }
+}
+.animate-glow {
+  animation: glow-pulse 8s ease-in-out infinite;
+}
+
+/* Animated gradient text/background shift */
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 6s ease infinite;
+}
+
+/* Shimmer sweep used on accent bars */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.animate-shimmer {
+  background: linear-gradient(
+    110deg,
+    transparent 30%,
+    rgba(252, 194, 41, 0.5) 50%,
+    transparent 70%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-float-slow,
+  .animate-glow,
+  .animate-gradient,
+  .animate-shimmer {
+    animation: none !important;
+  }
+  .tilt-card {
+    transform: none !important;
   }
 }
 

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { ArrowUpRight, ShieldCheck, Factory } from "lucide-react";
 import { companyOverview } from "../data";
 import indianEngineers from "../assets/indian_engineers.webp";
+import TiltCard from "./TiltCard";
 
 export default function Hero() {
   const [isMounted, setIsMounted] = useState(false);
@@ -21,8 +22,8 @@ export default function Hero() {
     <section id="hero" className="relative min-h-screen bg-brand-dark pt-32 pb-32 flex flex-col justify-center overflow-hidden">
       {/* Spectacular full-width blueprint mesh and glow backlights */}
       <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
-      <div className="absolute top-0 right-0 w-[700px] h-[700px] bg-brand-yellow/10 rounded-full filter blur-[150px] pointer-events-none" />
-      <div className="absolute -left-20 top-40 w-[400px] h-[400px] bg-brand-yellow/5 rounded-full filter blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[700px] h-[700px] bg-brand-yellow/10 rounded-full filter blur-[150px] pointer-events-none animate-glow" />
+      <div className="absolute -left-20 top-40 w-[400px] h-[400px] bg-brand-yellow/5 rounded-full filter blur-[120px] pointer-events-none animate-glow" style={{ animationDelay: "3s" }} />
 
       {/* Main content grid using full-width container directly */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
@@ -104,13 +105,13 @@ export default function Hero() {
           </div>
 
           {/* Right Column: Full-height dynamic interactive image card directly in layout with slide-in from right */}
-          <div 
-            className={`lg:col-span-5 relative w-full transition-all duration-1000 delay-300 ease-out transform ${
+          <div
+            className={`lg:col-span-5 relative w-full perspective-1000 transition-all duration-1000 delay-300 ease-out transform ${
               isMounted ? "opacity-100 translate-x-0 scale-100" : "opacity-0 translate-x-8 scale-95"
             }`}
           >
-            <div className="relative w-full h-[450px] sm:h-[480px] lg:h-[540px] rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl">
-              
+            <TiltCard maxTilt={10} className="relative w-full h-[450px] sm:h-[480px] lg:h-[540px] rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl">
+
               {/* Engineers Image */}
               <img
                 src={indianEngineers}
@@ -123,7 +124,7 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/10 to-transparent z-20 pointer-events-none" />
 
               {/* Floating ambient CNC status card */}
-              <div className="absolute bottom-6 left-6 right-6 bg-brand-dark-light/95 backdrop-blur-md border border-zinc-800 p-5 rounded-lg flex items-center gap-4 shadow-2xl text-white z-30">
+              <div className="absolute bottom-6 left-6 right-6 bg-brand-dark-light/95 backdrop-blur-md border border-zinc-800 p-5 rounded-lg flex items-center gap-4 shadow-2xl text-white z-30 tilt-layer">
                 <div className="p-3 bg-brand-yellow/10 border border-brand-yellow/20 rounded">
                   <Factory className="w-5 h-5 text-brand-yellow" />
                 </div>
@@ -138,13 +139,13 @@ export default function Hero() {
               </div>
 
               {/* Spinning badge similar to the "BUILD YOUR PROJECT" badge */}
-              <div className="absolute top-6 right-6 w-20 h-20 rounded-full bg-brand-dark/95 border border-zinc-800 backdrop-blur-sm flex items-center justify-center p-2 animate-[spin_25s_linear_infinite] z-30 shadow-lg">
+              <div className="absolute top-6 right-6 w-20 h-20 rounded-full bg-brand-dark/95 border border-zinc-800 backdrop-blur-sm flex items-center justify-center p-2 animate-[spin_25s_linear_infinite] z-30 shadow-lg tilt-layer">
                 <div className="text-center font-mono text-[7px] text-brand-yellow font-bold uppercase tracking-wider leading-tight">
                   Precision • CNC • BNC • STEEL •
                 </div>
               </div>
 
-            </div>
+            </TiltCard>
           </div>
 
         </div>

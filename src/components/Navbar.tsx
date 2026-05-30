@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
+import logo from "../assets/logo.webp";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -64,24 +65,23 @@ export default function Navbar() {
       id="main-nav"
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-brand-dark/95 backdrop-blur-md border-b border-zinc-800 py-3 shadow-md"
-          : "bg-brand-dark/80 backdrop-blur-sm border-b border-zinc-900/50 py-5"
+          ? "bg-white/95 backdrop-blur-md border-b border-zinc-200 py-3 shadow-md"
+          : "bg-white/90 backdrop-blur-sm border-b border-zinc-200/50 py-5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-12">
           
           {/* Company branding */}
-          <div className="flex-shrink-0 flex flex-col cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-            <span className="font-sans font-black text-sm sm:text-lg tracking-[0.08em] text-white uppercase leading-none">
-              S.B. Engineering Services
-            </span>
-            <span className="font-mono text-[8px] tracking-[0.16em] text-brand-yellow font-bold uppercase mt-1">
-              Precision Machining &amp; Industrial Solutions
-            </span>
+          <div className="flex-shrink-0 flex items-center cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+            <img 
+              src={logo} 
+              alt="S.B. Engineering Services Logo" 
+              className="h-10 sm:h-12 w-auto object-contain hover:scale-[1.02] transition-transform duration-300" 
+            />
           </div>
 
-          {/* Desktop navigation with Scrollspy Text Highlight glow */}
+          {/* Desktop navigation with Scrollspy Text Highlight */}
           <div className="hidden lg:flex items-center space-x-8">
             {menuItems.map((item) => {
               const isActive = activeSection === item.href.substring(1);
@@ -92,8 +92,8 @@ export default function Navbar() {
                   onClick={(e) => handleScrollTo(e, item.href)}
                   className={`font-sans text-[11px] tracking-widest uppercase font-bold transition-all duration-200 py-1 cursor-pointer select-none ${
                     isActive
-                      ? "text-brand-yellow drop-shadow-[0_0_8px_rgba(252,194,41,0.5)] scale-102"
-                      : "text-zinc-300 hover:text-brand-yellow"
+                      ? "text-zinc-950 border-b-2 border-brand-yellow scale-102"
+                      : "text-zinc-600 hover:text-zinc-950"
                   }`}
                 >
                   {item.label}
@@ -115,7 +115,7 @@ export default function Navbar() {
             <button
               id="mobile-nav-toggle"
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded text-zinc-300 hover:text-white hover:bg-zinc-800/50 transition-colors duration-200"
+              className="p-2 rounded text-zinc-600 hover:text-zinc-950 hover:bg-zinc-100 transition-colors duration-200"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -126,7 +126,7 @@ export default function Navbar() {
       {/* Mobile Drawer */}
       <div
         id="mobile-menu-drawer"
-        className={`lg:hidden fixed inset-x-0 top-16 bg-brand-dark border-b border-zinc-800 p-6 shadow-2xl transition-all duration-300 ${
+        className={`lg:hidden fixed inset-x-0 top-16 bg-white border-b border-zinc-200 p-6 shadow-2xl transition-all duration-300 ${
           isOpen ? "opacity-100 translate-y-0 visible" : "opacity-0 -translate-y-4 invisible"
         }`}
       >
@@ -138,8 +138,8 @@ export default function Navbar() {
                 key={item.label}
                 href={item.href}
                 onClick={(e) => handleScrollTo(e, item.href)}
-                className={`font-sans text-xs tracking-wider uppercase py-2 transition-colors duration-200 border-b border-zinc-800 font-bold flex items-center justify-between ${
-                  isActive ? "text-brand-yellow" : "text-zinc-300 hover:text-brand-yellow"
+                className={`font-sans text-xs tracking-wider uppercase py-2 transition-colors duration-200 border-b border-zinc-100 font-bold flex items-center justify-between ${
+                  isActive ? "text-brand-yellow-hover" : "text-zinc-600 hover:text-zinc-950"
                 }`}
               >
                 <span>{item.label}</span>

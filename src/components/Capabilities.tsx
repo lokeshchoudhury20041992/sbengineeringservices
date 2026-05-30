@@ -1,6 +1,7 @@
 import React from "react";
 import { capabilities } from "../data";
 import { useScrollReveal } from "../hooks/useScrollReveal";
+import TiltCard from "./TiltCard";
 import {
   Cpu,
   Settings,
@@ -59,7 +60,7 @@ export default function Capabilities() {
         </div>
 
         {/* Mockup High-Contrast Bento Capabilities Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 perspective-1000">
           {capabilities.map((cap, idx) => {
             const IconComponent = iconMap[cap.iconName] || Settings;
 
@@ -91,12 +92,13 @@ export default function Capabilities() {
             }
 
             return (
-              <div
+              <TiltCard
                 id={`capability-card-${cap.id}`}
                 key={cap.id}
-                className={`group relative flex flex-col justify-between p-8 rounded-xl border transition-all duration-300 shadow-sm ${cardBgClass}`}
+                className={`group relative flex flex-col justify-between p-8 rounded-xl border shadow-sm ${cardBgClass} ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+                style={{ transitionDelay: `${idx * 150}ms` }}
               >
-                <div>
+                <div className="tilt-layer">
                   {/* Icon Frame */}
                   <div className={`w-12 h-12 rounded-lg flex items-center justify-center border transition-all duration-300 mb-6 ${iconBgClass}`}>
                     <IconComponent className="w-5 h-5" />
@@ -118,7 +120,7 @@ export default function Capabilities() {
                   </span>
                   <div className={`w-2 h-2 rounded-full transition-all duration-300 ${dotClass}`} />
                 </div>
-              </div>
+              </TiltCard>
             );
           })}
         </div>

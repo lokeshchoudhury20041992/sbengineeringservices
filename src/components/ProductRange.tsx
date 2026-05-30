@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { productRange, exportReadiness } from "../data";
 import { CheckCircle, Search, HelpCircle, Send, ArrowRight } from "lucide-react";
 import { useScrollReveal } from "../hooks/useScrollReveal";
+import TiltCard from "./TiltCard";
 
 export default function ProductRange() {
   const [revealRef, isVisible] = useScrollReveal();
@@ -91,11 +92,12 @@ export default function ProductRange() {
         </div>
 
         {/* Products Grid in Sleek Dark-Mode */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 perspective-1000">
           {filteredProducts.map((product, idx) => (
-            <div
+            <TiltCard
               key={product.name}
-              className="flex flex-col bg-brand-dark-light border border-zinc-800 hover:border-zinc-700 rounded-lg overflow-hidden shadow-xl group hover:-translate-y-1 transition-all duration-305 transition-all duration-300"
+              maxTilt={6}
+              className="flex flex-col bg-brand-dark-light border border-zinc-800 hover:border-zinc-700 rounded-lg overflow-hidden shadow-xl group"
             >
               <div className="relative h-48 overflow-hidden bg-zinc-950">
                 <img
@@ -131,7 +133,7 @@ export default function ProductRange() {
                   </button>
                 </div>
               </div>
-            </div>
+            </TiltCard>
           ))}
 
           {filteredProducts.length === 0 && (
