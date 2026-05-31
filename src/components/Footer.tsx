@@ -51,9 +51,9 @@ export default function Footer() {
           {/* Columnar directories */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 text-xs mb-12">
             
-            <div className="lg:col-span-6 space-y-4">
+            <div className="lg:col-span-4 space-y-4">
               <h4 className="font-sans text-xs font-bold text-white uppercase tracking-wider">
-                Legal Compliance &amp; Quality Assurance
+                Legal Compliance &amp; QA
               </h4>
               <p className="font-sans leading-relaxed text-zinc-400">
                 {companyOverview.standards} All products leave accompanied by genuine certified Mill Test Certificates compliant with international export specifications (including ASTM, EN, ISO).
@@ -71,14 +71,24 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div className="lg:col-span-3 space-y-3">
+            <div className="lg:col-span-5 space-y-4">
               <h4 className="font-sans text-xs font-bold text-white uppercase tracking-wider">
-                National Fabrication Base
+                Office &amp; Factory Coordinates
               </h4>
-              <p className="font-sans text-[11px] text-zinc-500 leading-relaxed">
-                Howrah Industrial Complex, West Bengal, India.<br />
-                Serves clients worldwide across Europe, Asia, and the Americas.
-              </p>
+              <div className="space-y-3 font-sans text-[11px] text-zinc-400">
+                <div>
+                  <span className="font-mono text-[9px] uppercase tracking-wider text-brand-yellow block font-bold">Registered Office</span>
+                  <p className="mt-0.5">P-25, Senhati Colony, Behala, Kolkata - 700034, India</p>
+                </div>
+                <div>
+                  <span className="font-mono text-[9px] uppercase tracking-wider text-brand-yellow block font-bold">Factory Address</span>
+                  <p className="mt-0.5">Benaras Road, Near Kona High School, Howrah - 14, India</p>
+                </div>
+                <div className="pt-1 flex flex-col gap-1 font-mono text-[10px] text-zinc-500 border-t border-zinc-900/60 mt-2">
+                  <div>PH: +91 98301 08760 / +91 85998 82965</div>
+                  <div>EM: <a href="mailto:sbengineeringproject@gmail.com" className="hover:text-brand-yellow transition underline">sbengineeringproject@gmail.com</a></div>
+                </div>
+              </div>
             </div>
 
           </div>

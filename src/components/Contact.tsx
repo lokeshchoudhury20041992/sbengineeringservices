@@ -66,46 +66,79 @@ export default function Contact() {
               {/* Physical details block */}
               <div className="mt-10 space-y-6">
                 
-                {/* Physical address office */}
+                {/* Registered Office */}
                 <div className="flex gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-brand-yellow/10 border border-brand-yellow/20 flex items-center justify-center text-brand-dark">
+                  <div className="w-10 h-10 rounded-lg bg-brand-yellow/10 border border-brand-yellow/20 flex items-center justify-center text-brand-dark shrink-0">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="font-mono text-[9px] uppercase tracking-widest text-zinc-400 block">
-                      Operations Hub
+                    <span className="font-mono text-[9px] uppercase tracking-widest text-zinc-400 block font-bold">
+                      Registered Office
                     </span>
-                    <p className="font-sans text-xs text-brand-dark mt-1 leading-snug font-bold">
-                      Kantalia Industrial Complex, Howrah — West Bengal, India
+                    <p className="font-sans text-xs text-brand-dark mt-1 leading-normal font-bold">
+                      P-25, Senhati Colony, Behala, Kolkata - 700034, India
                     </p>
+                  </div>
+                </div>
+
+                {/* Factory Address */}
+                <div className="flex gap-4">
+                  <div className="w-10 h-10 rounded-lg bg-brand-yellow/10 border border-brand-yellow/20 flex items-center justify-center text-brand-dark shrink-0">
+                    <MapPin className="w-4 h-4 text-brand-yellow" />
+                  </div>
+                  <div>
+                    <span className="font-mono text-[9px] uppercase tracking-widest text-zinc-400 block font-bold">
+                      Factory Address
+                    </span>
+                    <p className="font-sans text-xs text-brand-dark mt-1 leading-normal font-bold">
+                      Benaras Road, Near Kona High School, Howrah - 14, India
+                    </p>
+                  </div>
+                </div>
+
+                {/* Direct Contact Numbers */}
+                <div className="flex gap-4">
+                  <div className="w-10 h-10 rounded-lg bg-brand-yellow/10 border border-brand-yellow/20 flex items-center justify-center text-brand-dark shrink-0">
+                    <Phone className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <span className="font-mono text-[9px] uppercase tracking-widest text-zinc-400 block font-bold">
+                      Direct Contact Numbers
+                    </span>
+                    <a
+                      href="tel:+919830108760"
+                      className="font-sans text-xs text-brand-dark mt-1 hover:text-brand-yellow-hover underline decoration-brand-yellow transition block font-bold"
+                    >
+                      +91 98301 08760 / +91 85998 82965
+                    </a>
                   </div>
                 </div>
 
                 {/* Email coordinates */}
                 <div className="flex gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-brand-yellow/10 border border-brand-yellow/20 flex items-center justify-center text-brand-dark">
+                  <div className="w-10 h-10 rounded-lg bg-brand-yellow/10 border border-brand-yellow/20 flex items-center justify-center text-brand-dark shrink-0">
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="font-mono text-[9px] uppercase tracking-widest text-zinc-400 block">
-                      Secure Corporate Email
+                    <span className="font-mono text-[9px] uppercase tracking-widest text-zinc-400 block font-bold">
+                      Official Mail Coordinate
                     </span>
                     <a
-                      href="mailto:coordination@sbengineeringservices.com"
+                      href="mailto:sbengineeringproject@gmail.com"
                       className="font-sans text-xs text-brand-dark mt-1 hover:text-brand-yellow-hover underline decoration-brand-yellow transition block font-bold"
                     >
-                      coordination@sbengineeringservices.com
+                      sbengineeringproject@gmail.com
                     </a>
                   </div>
                 </div>
 
                 {/* Response cycle */}
                 <div className="flex gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-brand-yellow/10 border border-brand-yellow/20 flex items-center justify-center text-brand-dark">
+                  <div className="w-10 h-10 rounded-lg bg-brand-yellow/10 border border-brand-yellow/20 flex items-center justify-center text-brand-dark shrink-0">
                     <Clock className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="font-mono text-[9px] uppercase tracking-widest text-zinc-400 block">
+                    <span className="font-mono text-[9px] uppercase tracking-widest text-zinc-400 block font-bold">
                       Response Cycle
                     </span>
                     <p className="font-sans text-xs text-brand-dark mt-1 leading-snug font-bold">

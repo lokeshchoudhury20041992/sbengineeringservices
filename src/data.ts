@@ -4,7 +4,7 @@ export const companyOverview = {
   name: "S.B. Engineering Services",
   shortName: "SB Engg",
   tagline: "Precision engineering that never fails",
-  about: "S.B. Engineering Services is a precision-driven engineering firm specializing in CNC machining, BNC fabrication, and industrial component manufacturing for steel, power, petrochemical, and renewable energy sectors. With over two decades of expertise, we deliver high-accuracy, cost-effective, and timely solutions for mission-critical applications worldwide.",
+  about: "S.B. Engineering Services, with 40+ yrs combined experience of engineering precision, is a leading precision-engineering firm specializing in CNC machining, BNC fabrication, and custom mechanical component manufacturing for steel, power, petrochemical, and renewable energy sectors. sbengineeringservices.com",
   standards: "Our facilities are equipped to meet international quality standards and export requirements, ensuring compliance with ISO, EN, and ASTM specifications. We provide vendor-grade documentation, traceability, and serial number–wise illustrated catalogues for global clients.",
   mission: "To deliver precision-engineered components and assemblies that meet global standards in quality, reliability, and performance, becoming a trusted partner for international clients in CNC and BNC machining.",
   vision: "To be recognized as a leading machining and fabrication house from India, known for innovation, integrity, and excellence in execution, serving clients across Asia, Europe, and the Americas.",

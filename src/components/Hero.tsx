@@ -78,7 +78,7 @@ export default function Hero() {
             </div>
 
             <p className="font-sans text-sm sm:text-base text-zinc-400 max-w-xl leading-relaxed">
-              {companyOverview.about} Delivering export-ready CNC/BNC fabrication and structural steel excellence for over two decades.
+              {companyOverview.about}
             </p>
 
             {/* Technical indicators / stats */}
