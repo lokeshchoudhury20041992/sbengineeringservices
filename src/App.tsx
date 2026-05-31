@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import AssociatedCompanies from "./components/AssociatedCompanies";
 import Overview from "./components/Overview";
 import Capabilities from "./components/Capabilities";
 import ProductRange from "./components/ProductRange";
@@ -15,6 +16,7 @@ export default function App() {
     <div className="bg-[#FCFAF7] min-h-screen text-[#1A1A1A] selection:bg-brand-yellow selection:text-brand-dark font-sans antialiased">
       <Navbar />
       <Hero />
+      <AssociatedCompanies />
       <Overview />
       <Capabilities />
       <ProductRange />
