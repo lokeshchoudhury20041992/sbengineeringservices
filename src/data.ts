@@ -76,29 +76,17 @@ export const capabilities: CapabilityItem[] = [
   }
 ];
 
-export const leadership: LeadershipMember[] = [
-  {
-    name: "Mr. Swapan Kumar Bhattacharya",
-    role: "Technical Director",
-    credentials: "C Eng, B.E. (Mech) — Jadavpur University, Kolkata",
-    experience: "40+ Years in Steel, Power & Petrochemical Plants",
-    expertise: [
-      "Mechanical fabrication and installation activities pan-India across steel, power, and petrochemical plants — piping, structures, tanks, and vessels",
-      "Specialist in CNC/BNC machining and structural steel",
-      "Expertise in Total Quality Management (TQM), with special training received from AOTS, Japan"
-    ]
-  },
-  {
-    name: "Mr. Sudhansu Sekhar Pattanaik",
-    role: "Operations Director",
-    credentials: "CEO — Palash Utkal Consultancy LLP | Designated Partner — Kalinga Warriors LLP",
-    experience: "25+ Years in Steel, Power & Industrial Operations",
-    expertise: [
-      "Industrial operations leadership across steel and power sector projects",
-      "Business administration, project coordination, and partner facility management"
-    ]
-  }
-];
+export const technicalDirector: LeadershipMember = {
+  name: "Mr. Swapan Kumar Bhattacharya",
+  role: "Technical Director",
+  credentials: "C Eng, B.E. (Mech) — Jadavpur University, Kolkata",
+  experience: "40+ Years in Steel, Power & Petrochemical Plants",
+  expertise: [
+    "Mechanical fabrication and installation activities pan-India across steel, power, and petrochemical plants — piping, structures, tanks, and vessels",
+    "Specialist in CNC/BNC machining and structural steel",
+    "Expertise in Total Quality Management (TQM), with special training received from AOTS, Japan"
+  ]
+};
 
 export const jointVentures: JointVenture[] = [
   {

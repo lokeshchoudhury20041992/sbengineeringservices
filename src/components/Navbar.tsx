@@ -13,7 +13,6 @@ export default function Navbar() {
     { label: "Products", href: "#products" },
     { label: "SKID Portfolio", href: "#skid-portfolio" },
     { label: "Joint Ventures", href: "#joint-ventures" },
-    { label: "Leadership", href: "#leadership" },
   ];
 
   useEffect(() => {

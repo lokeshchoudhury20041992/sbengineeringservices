@@ -1,7 +1,7 @@
 import React from "react";
-import { jointVentures } from "../data";
+import { jointVentures, technicalDirector } from "../data";
 import { useScrollReveal } from "../hooks/useScrollReveal";
-import { MapPin, Check, Briefcase, Network } from "lucide-react";
+import { MapPin, Check, Briefcase, Network, ShieldCheck, GraduationCap, Award, CheckCircle } from "lucide-react";
 
 export default function JointVentures() {
   const [revealRef, isVisible] = useScrollReveal();
@@ -27,6 +27,109 @@ export default function JointVentures() {
           <p className="font-sans text-xs sm:text-sm text-zinc-500 max-w-2xl mt-3 leading-relaxed">
             We collaborate with leading experts and firms to extend our reach in the international market, providing unparalleled engineering services.
           </p>
+        </div>
+
+        {/* Technical Director — engineering authority over the alliance network */}
+        <div className="relative mb-16 rounded-2xl bg-brand-dark border border-zinc-800 overflow-hidden shadow-lg">
+          {/* Top accent + backlight */}
+          <div className="absolute top-0 left-0 right-0 h-1 bg-brand-yellow" />
+          <div className="absolute -top-20 -right-20 w-72 h-72 bg-brand-yellow/10 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 relative">
+
+            {/* Identity & pedigree */}
+            <div className="p-6 sm:p-10 border-b lg:border-b-0 lg:border-r border-white/10">
+              <span className="inline-flex items-center gap-1.5 bg-brand-yellow text-brand-dark px-2.5 py-1 rounded-sm font-mono text-[9px] font-black uppercase tracking-widest">
+                <ShieldCheck className="w-3 h-3 stroke-[2.5]" />
+                {technicalDirector.role}
+              </span>
+
+              <h3 className="font-sans font-black text-xl sm:text-2xl text-white uppercase tracking-tight mt-4 leading-tight">
+                {technicalDirector.name}
+              </h3>
+
+              <p className="font-sans text-[11px] sm:text-xs text-zinc-400 leading-relaxed mt-3 max-w-md">
+                Directs engineering oversight, technical vetting, and quality assurance across every alliance workshop in our network — an in-house directorship, not an alliance partner.
+              </p>
+
+              <div className="space-y-4 mt-8">
+                {/* Credentials */}
+                <div className="flex items-start gap-3.5">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-brand-yellow">
+                    <GraduationCap className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <span className="font-mono text-[8px] uppercase tracking-widest text-zinc-500 block font-bold">
+                      Credentials &amp; Affiliations
+                    </span>
+                    <p className="font-sans text-[12px] text-zinc-100 mt-1 font-bold italic">
+                      {technicalDirector.credentials}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Experience */}
+                <div className="flex items-start gap-3.5">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-brand-yellow">
+                    <Award className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <span className="font-mono text-[8px] uppercase tracking-widest text-zinc-500 block font-bold">
+                      Professional Scope
+                    </span>
+                    <p className="font-sans text-[12px] text-zinc-100 mt-1 font-bold">
+                      {technicalDirector.experience}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Execution focus + TQM highlight */}
+            <div className="p-6 sm:p-10 flex flex-col justify-between">
+              <div>
+                <span className="font-mono text-[9px] text-zinc-500 uppercase tracking-widest block font-bold mb-4">
+                  Strategic Execution Focus
+                </span>
+                <div className="space-y-3">
+                  {technicalDirector.expertise.map((exp) => (
+                    <div key={exp} className="flex gap-2.5 items-start">
+                      <div className="flex-shrink-0 w-4 h-4 rounded-full bg-brand-yellow/10 border border-brand-yellow/25 flex items-center justify-center text-brand-yellow mt-0.5">
+                        <CheckCircle className="w-2.5 h-2.5" />
+                      </div>
+                      <p className="font-sans text-[11px] text-zinc-300 leading-relaxed">
+                        {exp}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* AOTS TQM certification */}
+              <div className="mt-8 bg-white/5 border border-white/10 p-4 rounded-xl flex items-center gap-3.5">
+                <div className="w-10 h-10 rounded bg-brand-yellow/15 border border-brand-yellow/25 flex items-center justify-center font-mono text-[10px] text-brand-yellow font-bold shrink-0">
+                  AOTS
+                </div>
+                <div>
+                  <h4 className="font-sans font-bold text-xs text-white leading-snug">
+                    TQM Training — Japan Certified
+                  </h4>
+                  <p className="font-sans text-[10px] text-zinc-400 mt-0.5 leading-snug">
+                    Special training in Total Quality Management (TQM) received from AOTS, Japan.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        {/* Alliance network label */}
+        <div className="flex items-center gap-4 mb-8">
+          <span className="font-mono text-[10px] tracking-[0.25em] text-zinc-400 font-bold uppercase whitespace-nowrap">
+            Alliance Network
+          </span>
+          <div className="h-px flex-1 bg-zinc-200" />
         </div>
 
         {/* Joint Ventures Cards Grid */}
