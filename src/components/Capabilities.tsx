@@ -54,7 +54,7 @@ export default function Capabilities() {
             Of Services
           </h2>
           <p className="font-sans text-xs sm:text-sm text-zinc-500 max-w-xl mt-4">
-            Fully integrated CNC lathes, BNC fabrication bays, and raw-material processing units delivering components across extreme compliance benchmarks.
+            CNC turning and milling, BNC machining, custom fabrication, structural steel, and site installation — delivered to ISO, EN, and ASTM specifications.
           </p>
         </div>
 

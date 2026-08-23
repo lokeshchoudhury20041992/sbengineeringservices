@@ -56,7 +56,7 @@ export default function Footer() {
                 Legal Compliance &amp; QA
               </h4>
               <p className="font-sans leading-relaxed text-zinc-400">
-                {companyOverview.standards} All products leave accompanied by genuine certified Mill Test Certificates compliant with international export specifications (including ASTM, EN, ISO).
+                {companyOverview.standards} Every dispatch is accompanied by Material Test Certificates (MTC) and the compliance documentation required by international export specifications, including ISO, EN, and ASTM.
               </p>
             </div>
 
@@ -66,7 +66,7 @@ export default function Footer() {
               </h4>
               <ul className="space-y-1.5 text-[11px] font-mono text-zinc-500">
                 <li>M/s. Arup Engineering Enterprises</li>
-                <li>M/s. Ramakrishna Enterprise</li>
+                <li>M/s. Ramakrishna Enterprice</li>
                 <li>M/s. Soham Industries</li>
               </ul>
             </div>

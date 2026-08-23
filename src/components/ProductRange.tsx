@@ -12,10 +12,10 @@ export default function ProductRange() {
   const [enquirySubmitted, setEnquirySubmitted] = useState(false);
   const [enquiryText, setEnquiryText] = useState("");
 
-  const categories = ["All", "Industrial Fasteners", "Material Handling", "Pressure Vessels", "Heavy Logistics", "Steel Plants", "Renewable Energy", "Infrastructure"];
+  const categories = ["All", ...Array.from(new Set(productRange.map((product) => product.category)))];
 
   const filteredProducts = productRange.filter((product) => {
-    const matchesCategory = selectedCategory === "All" || product.category.toLowerCase().includes(selectedCategory.split(" ")[0].toLowerCase());
+    const matchesCategory = selectedCategory === "All" || product.category === selectedCategory;
     const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
                           product.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           product.description.toLowerCase().includes(searchQuery.toLowerCase());
@@ -43,18 +43,18 @@ export default function ProductRange() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header matching mockup "Take A Look At Our Latest Projects" */}
+        {/* Section Header: export-ready product range */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-12">
           <div className="lg:col-span-7">
             <span className="font-mono text-[10px] tracking-[0.25em] text-brand-yellow font-bold uppercase block mb-3">
-              — RECENT WORK
+              — PRODUCT RANGE
             </span>
             <h2 className="font-sans font-black text-3xl sm:text-4xl text-white tracking-tight uppercase">
-              Take A Look At Our <br />
-              <span className="text-brand-yellow">Latest Projects</span>
+              Export-Ready <br />
+              <span className="text-brand-yellow">Product Range</span>
             </h2>
             <p className="font-sans text-xs sm:text-sm text-zinc-400 mt-3">
-              Machined to ISO global export compliance standards, fully bundled with Mill Test Certificates, custom engravings, and heavy maritime crating.
+              Components machined and fabricated to ISO, EN, and ASTM specifications — dispatched with Material Test Certificates, serial-wise marking, and seaworthy crating.
             </p>
           </div>
           {/* Custom Search Box in Dark Theme */}
@@ -212,7 +212,7 @@ export default function ProductRange() {
                 </li>
                 <li className="flex justify-between py-1 border-b border-zinc-800">
                   <span className="text-zinc-500">Material Grading</span>
-                  <span>EN-19, EN-24, Bronze, High-Alloy</span>
+                  <span>EN-19, EN-24, 42CrMo4, Bronze, AMPCO</span>
                 </li>
                 <li className="flex justify-between py-1 border-b border-zinc-800">
                   <span className="text-zinc-500">Compliant Specifications</span>

@@ -46,8 +46,8 @@ export default function Hero() {
 
             {/* Spectacular full-size display title */}
             <h1 className="font-sans font-black text-5xl sm:text-6xl lg:text-7xl text-white tracking-tight leading-[1.05] uppercase">
-              Building Dreams <br />
-              <span className="text-brand-yellow">Into Reality</span>
+              Precision Machining <br />
+              <span className="text-brand-yellow">&amp; Industrial Solutions</span>
             </h1>
 
             {/* Mockup Circle Arrow & CTA Buttons Row */}
@@ -84,21 +84,21 @@ export default function Hero() {
             {/* Technical indicators / stats */}
             <div className="grid grid-cols-3 gap-6 pt-8 w-full border-t border-zinc-800">
               <div>
-                <div className="font-sans text-3xl sm:text-4xl font-extrabold text-white">40+</div>
+                <div className="font-sans text-3xl sm:text-4xl font-extrabold text-white">20+</div>
                 <div className="font-mono text-[8px] sm:text-[9px] uppercase tracking-wider text-zinc-500 mt-1 font-bold">
-                  Years Team Experience
+                  Years Of Expertise
                 </div>
               </div>
               <div>
                 <div className="font-sans text-3xl sm:text-4xl font-extrabold text-brand-yellow">100%</div>
                 <div className="font-mono text-[8px] sm:text-[9px] uppercase tracking-wider text-zinc-500 mt-1 font-bold">
-                  MTC Cert &amp; Audited
+                  MTC &amp; Traceability
                 </div>
               </div>
               <div>
                 <div className="font-sans text-3xl sm:text-4xl font-extrabold text-white">Global</div>
                 <div className="font-mono text-[8px] sm:text-[9px] uppercase tracking-wider text-zinc-500 mt-1 font-bold">
-                  Export Staging
+                  Export-Ready Supply
                 </div>
               </div>
             </div>
@@ -133,7 +133,7 @@ export default function Hero() {
                     Heavy-Duty CNC Production
                   </h4>
                   <p className="font-sans text-[10px] text-zinc-400 mt-0.5">
-                    Live coordination with Howrah industrial complex units
+                    Backed by allied CNC and fabrication units in Howrah
                   </p>
                 </div>
               </div>

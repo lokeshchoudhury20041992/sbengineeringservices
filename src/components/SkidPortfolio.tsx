@@ -79,7 +79,7 @@ export default function SkidPortfolio() {
                 Process &amp; Automation Tools
               </h3>
               <p className="font-sans text-xs text-zinc-500 mt-1">
-                Advanced software suites utilized for mass simulation, fluid thermodynamics, solid modeling, and SCADA programming.
+                Process simulation, mass and energy balance, control-system programming, and 3D design handled in-house across the toolchain below.
               </p>
             </div>
 
@@ -89,7 +89,7 @@ export default function SkidPortfolio() {
                   <h4 className="font-sans text-xs font-black text-brand-dark uppercase tracking-wider mb-3 flex items-center gap-2">
                     {tech.category === "Process Engineering" && <Activity className="w-4 h-4 text-zinc-400" />}
                     {tech.category === "Automation Systems" && <Monitor className="w-4 h-4 text-zinc-400" />}
-                    {tech.category === "CAD Design & Drafting Tools" && <Compass className="w-4 h-4 text-zinc-400" />}
+                    {tech.category === "Design & Drafting Tools" && <Compass className="w-4 h-4 text-zinc-400" />}
                     {tech.category}
                   </h4>
                   <ul className="space-y-2">

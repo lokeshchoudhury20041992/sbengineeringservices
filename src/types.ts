@@ -16,6 +16,7 @@ export interface LeadershipMember {
 
 export interface JointVenture {
   name: string;
+  addressLabel: string;
   address: string;
   capabilities: string[];
 }
@@ -29,10 +30,14 @@ export interface ProductItem {
 
 export interface SkidItem {
   name: string;
-  description?: string;
 }
 
 export interface ToolExpertise {
   category: string;
   items: string[];
+}
+
+export interface CompanyStat {
+  value: string;
+  label: string;
 }

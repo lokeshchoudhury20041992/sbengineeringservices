@@ -1,6 +1,6 @@
 {
   "name": "S.B. Engineering Services",
-  "description": "Precision CNC/BNC machining and custom industrial fabrication solutions",
+  "description": "Precision-driven CNC machining, BNC fabrication, structural steel, and process skid solutions for the steel, power, petrochemical, and renewable energy sectors.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

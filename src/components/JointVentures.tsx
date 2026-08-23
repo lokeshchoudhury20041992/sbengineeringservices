@@ -25,7 +25,7 @@ export default function JointVentures() {
             Joint Ventures &amp; <span className="text-brand-yellow">Expert Partners</span>
           </h2>
           <p className="font-sans text-xs sm:text-sm text-zinc-500 max-w-2xl mt-3 leading-relaxed">
-            We collaborate with leading engineering firms and specialized modern facilities to execute complex, global EPC contracts.
+            We collaborate with leading experts and firms to extend our reach in the international market, providing unparalleled engineering services.
           </p>
         </div>
 
@@ -50,7 +50,7 @@ export default function JointVentures() {
                   </div>
                   <div>
                     <span className="font-mono text-[9px] text-brand-yellow font-bold uppercase tracking-widest block">
-                      Operational Lead
+                      Alliance Partner
                     </span>
                     <h3 className="font-sans font-black text-sm text-brand-dark uppercase tracking-wide leading-tight">
                       {partner.name}
@@ -61,9 +61,14 @@ export default function JointVentures() {
                 {/* Physical Location Address */}
                 <div className="flex items-start gap-2 bg-white p-3.5 rounded-lg border border-zinc-200/80 mb-6 group-hover:border-zinc-300 transition shadow-sm">
                   <MapPin className="w-4 h-4 text-zinc-400 mt-0.5 flex-shrink-0" />
-                  <span className="font-sans text-[11px] text-zinc-650 leading-relaxed font-semibold">
-                    {partner.address}
-                  </span>
+                  <div>
+                    <span className="font-mono text-[8px] text-zinc-400 uppercase tracking-widest block font-bold mb-0.5">
+                      {partner.addressLabel}
+                    </span>
+                    <span className="font-sans text-[11px] text-zinc-650 leading-relaxed font-semibold">
+                      {partner.address}
+                    </span>
+                  </div>
                 </div>
 
                 {/* List of Partner Capabilities */}

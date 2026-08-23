@@ -25,7 +25,7 @@ export default function Leadership() {
             Our Key <span className="text-brand-yellow">Leadership Team</span>
           </h2>
           <p className="font-sans text-xs sm:text-sm text-zinc-500 max-w-xl mt-3">
-            With a combined experience of over six decades in precision mechanics, we provide complete compliance planning and solid administrative execution.
+            With over six decades of combined experience across steel, power, and petrochemical plants, our leadership brings hands-on machining, fabrication, and quality-management depth to every contract.
           </p>
         </div>
 
@@ -65,7 +65,7 @@ export default function Leadership() {
                     </div>
                     <div>
                       <span className="font-mono text-[8px] uppercase tracking-widest text-zinc-400 block">
-                        Academic Credentials
+                        Credentials &amp; Affiliations
                       </span>
                       <p className="font-sans text-[12px] text-brand-dark mt-1 font-bold italic">
                         {member.credentials}
@@ -121,7 +121,7 @@ export default function Leadership() {
                       TQM Training — Japan Certified
                     </h4>
                     <p className="font-sans text-[10px] text-zinc-500 mt-0.5 leading-snug">
-                      AOTS Japan specialization in Total Quality Management architectures.
+                      Special training in Total Quality Management (TQM) received from AOTS, Japan.
                     </p>
                   </div>
                 </div>
