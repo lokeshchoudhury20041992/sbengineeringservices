@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { ArrowUpRight, ShieldCheck, Factory } from "lucide-react";
+import { ArrowUpRight, ShieldCheck, Factory, Phone, Mail } from "lucide-react";
 import { companyOverview } from "../data";
 import indianEngineers from "../assets/indian_engineers.webp";
 import TiltCard from "./TiltCard";
@@ -75,6 +75,54 @@ export default function Hero() {
                   Explore Catalog
                 </button>
               </div>
+            </div>
+
+            {/* Direct contact coordinates: phone & email */}
+            <div className="flex flex-wrap items-stretch gap-3 w-full">
+              {/* Direct lines */}
+              <div className="flex items-center gap-3 w-full sm:w-auto bg-brand-dark-light/70 border border-zinc-800 hover:border-zinc-600 rounded-xl px-4 py-3 transition-colors duration-200">
+                <span className="w-9 h-9 shrink-0 rounded-lg bg-brand-yellow/10 border border-brand-yellow/20 flex items-center justify-center">
+                  <Phone className="w-4 h-4 text-brand-yellow" />
+                </span>
+                <div className="min-w-0">
+                  <span className="font-mono text-[8px] uppercase tracking-widest text-zinc-500 block font-bold">
+                    Call Direct
+                  </span>
+                  <div className="font-sans text-sm font-bold text-white mt-0.5 flex flex-wrap items-center gap-x-1.5">
+                    <a
+                      href="tel:+919830108760"
+                      className="whitespace-nowrap hover:text-brand-yellow transition-colors duration-200"
+                    >
+                      +91 98301 08760
+                    </a>
+                    <span className="text-zinc-600" aria-hidden="true">/</span>
+                    <a
+                      href="tel:+918599882965"
+                      className="whitespace-nowrap hover:text-brand-yellow transition-colors duration-200"
+                    >
+                      +91 85998 82965
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Mail coordinate */}
+              <a
+                href="mailto:sbengineeringproject@gmail.com"
+                className="group flex items-center gap-3 w-full sm:w-auto bg-brand-dark-light/70 border border-zinc-800 hover:border-zinc-600 rounded-xl px-4 py-3 transition-colors duration-200"
+              >
+                <span className="w-9 h-9 shrink-0 rounded-lg bg-brand-yellow/10 border border-brand-yellow/20 flex items-center justify-center">
+                  <Mail className="w-4 h-4 text-brand-yellow" />
+                </span>
+                <div className="min-w-0">
+                  <span className="font-mono text-[8px] uppercase tracking-widest text-zinc-500 block font-bold">
+                    Email Us
+                  </span>
+                  <span className="font-sans text-sm font-bold text-white mt-0.5 block break-words group-hover:text-brand-yellow transition-colors duration-200">
+                    sbengineeringproject@gmail.com
+                  </span>
+                </div>
+              </a>
             </div>
 
             <p className="font-sans text-sm sm:text-base text-zinc-400 max-w-xl leading-relaxed">

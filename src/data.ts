@@ -1,4 +1,4 @@
-import { CapabilityItem, CompanyStat, LeadershipMember, JointVenture, ProductItem, SkidItem, ToolExpertise } from "./types";
+import { CapabilityItem, CompanyStat, IndustrySector, LeadershipMember, JointVenture, PartnerLogo, ProcessStep, ProductItem, SkidItem, ToolExpertise } from "./types";
 
 export const companyOverview = {
   name: "S.B. Engineering Services",
@@ -77,7 +77,7 @@ export const capabilities: CapabilityItem[] = [
 ];
 
 export const technicalDirector: LeadershipMember = {
-  name: "Mr. Swapan Kumar Bhattacharya",
+  name: "Swapan Kumar Bhattacharya",
   role: "Technical Director",
   credentials: "C Eng, B.E. (Mech) — Jadavpur University, Kolkata",
   experience: "40+ Years in Steel, Power & Petrochemical Plants",
@@ -90,7 +90,7 @@ export const technicalDirector: LeadershipMember = {
 
 export const jointVentures: JointVenture[] = [
   {
-    name: "M/s. ARUP ENGG. ENTERPRISES",
+    name: "ARUP ENGG. ENTERPRISES",
     addressLabel: "Address",
     address: "Balitikuri Manickpirtala, Jilerpar, Howrah - 711113",
     capabilities: [
@@ -101,7 +101,7 @@ export const jointVentures: JointVenture[] = [
     ]
   },
   {
-    name: "M/s. RAMAKRISHNA ENTERPRICE",
+    name: "RAMAKRISHNA ENTERPRICE",
     addressLabel: "Office Address",
     address: "Kantalia Industrial Complex, Howrah",
     capabilities: [
@@ -113,7 +113,7 @@ export const jointVentures: JointVenture[] = [
     ]
   },
   {
-    name: "M/s. SOHAM INDUSTRIES",
+    name: "SOHAM INDUSTRIES",
     addressLabel: "Workshop",
     address: "Kalachand Nandy Lane, Howrah - 711101",
     capabilities: [
@@ -235,4 +235,238 @@ export const exportReadiness = [
   { title: "Export-Grade Packaging & Logistics Support", description: "ISPM-15 treated wooden crates, rust-preventive coatings, moisture protection, and coordinated container staging for sea and air freight." },
   { title: "Traceability & Vendor Documentation", description: "Serial number–wise illustrated catalogues, heat and cast identification, and vendor documentation packs prepared for international audits." },
   { title: "Proven OEM & EPC Supply Experience", description: "Established experience supplying components and assemblies to OEMs and EPC contractors, with the paperwork and coordination that entails." }
+];
+
+/**
+ * Approved and associated corporate partnerships, shown in the home-page marquee
+ * and again in full on the Clients & Projects page.
+ */
+export const partnerLogos: PartnerLogo[] = [
+  {
+    name: "Oil and Natural Gas Corporation",
+    shortName: "ONGC",
+    sector: "Energy",
+    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/9/9a/ONGC_Logo.svg"
+  },
+  {
+    name: "Hindustan Petroleum Corporation Limited",
+    shortName: "HPCL",
+    sector: "Refining",
+    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/a/a8/Hindustan_Petroleum_logo.svg"
+  },
+  {
+    name: "Bharat Petroleum Corporation Limited",
+    shortName: "BPCL",
+    sector: "Petroleum",
+    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7c/Bharat_Petroleum_logo.svg"
+  },
+  {
+    name: "L&T Electrical & Automation",
+    shortName: "L&T E&A",
+    sector: "Automation",
+    logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM4Bq6gd0PD8gfoDfqhdAYiCVqYIKhuu_pnA&s",
+    logoClassName: "h-8 w-32"
+  },
+  {
+    name: "Jindal Steel & Power",
+    shortName: "Jindal Steel",
+    sector: "Steel",
+    logoUrl: "https://www.jindalsteel.in/images/logo/jindal-steel-logo-black.svg",
+    logoClassName: "h-9 w-36"
+  },
+  {
+    name: "Steel Authority of India Limited",
+    shortName: "SAIL",
+    sector: "Steel",
+    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1f/SAIL_Logo.svg"
+  },
+  {
+    name: "Simplex Infrastructures Limited",
+    shortName: "Simplex",
+    sector: "Infrastructure",
+    logoUrl: "https://www.simplexinfra.com/images/simplex-logo.png",
+    logoClassName: "h-10 w-36"
+  }
+];
+
+/** Sectors served, mapped to the product lines and skid packages actually supplied into them. */
+export const industriesServed: IndustrySector[] = [
+  {
+    id: "steel-plants",
+    name: "Integrated Steel Plants",
+    iconName: "Factory",
+    summary:
+      "High-temperature structural work and heavy wear components for blast furnace, sand plant, and crushing circuits.",
+    scope: [
+      "Blast furnace structural frames, guide rings and sliding bases",
+      "Pusher ram arms machined to close tolerance",
+      "Ring granulator rings, drive shaft couplings and housings",
+      "Sand plant chutes, mixing blades and vibrating screen frames"
+    ]
+  },
+  {
+    id: "power",
+    name: "Thermal Power Generation",
+    iconName: "Zap",
+    summary:
+      "Abrasion-resistant components for ash handling, coal handling, and bulk rail unloading systems.",
+    scope: [
+      "Wear-resistant sleeves and hard-faced couplings for fly-ash lines",
+      "Conveyor flights, scraper assemblies and apron feeder components",
+      "Crescent and tandem end frames for wagon tipplers",
+      "Chhabra wagon tippler assemblies"
+    ]
+  },
+  {
+    id: "petrochemical",
+    name: "Petrochemical, Oil & Gas",
+    iconName: "Droplets",
+    summary:
+      "Process skid packages, pressure components, and plant piping built to vendor documentation standards.",
+    scope: [
+      "Gas processing, metering and regulating skids",
+      "Vapour recovery (VRU), amine and chemical injection skids",
+      "Vessel shells, manifolds, flanged covers and heat-exchanger components",
+      "Tank, vessel and process piping installation on site"
+    ]
+  },
+  {
+    id: "renewables",
+    name: "Renewable Energy",
+    iconName: "Wind",
+    summary:
+      "Turbine components machined directly to OEM drawings and inspected before dispatch.",
+    scope: [
+      "Windmill hubs and rotational plates (Enercon specification)",
+      "Anchor adapters and high-strength brackets",
+      "Foundation bolt assemblies for turbine bases",
+      "Material Test Certificates supplied with every consignment"
+    ]
+  },
+  {
+    id: "infrastructure",
+    name: "Road & Railway Infrastructure",
+    iconName: "TrainFront",
+    summary:
+      "Fabricated and machined structures for national highway and rail programmes.",
+    scope: [
+      "Rail tables, runner beams and bogie frames",
+      "Concrete shuttering forms and portal girders",
+      "Bridge spans and support structures",
+      "Structural steel fabrication and site erection"
+    ]
+  },
+  {
+    id: "heavy-machinery",
+    name: "Heavy Machinery & Earthmoving",
+    iconName: "Truck",
+    summary:
+      "Large weldments and machined assemblies for earthmoving and water-control equipment.",
+    scope: [
+      "Excavator boom structures and dipper handles",
+      "Sector gates for water control duty",
+      "Mandrel wedges, plungers, couplings and seals",
+      "Spline matching, surface finishing and grinding"
+    ]
+  }
+];
+
+/** How an enquiry moves from drawing to dispatch. */
+export const processSteps: ProcessStep[] = [
+  {
+    id: "rfq",
+    title: "RFQ & Drawing Review",
+    description:
+      "Send 2D drawings or 3D models with the required specification. We review manufacturability, tolerances, and material grade before quoting.",
+    checkpoints: [
+      "Manufacturing feasibility and tolerance review",
+      "Material grade and finish confirmation",
+      "Lead time and commercial offer"
+    ],
+    iconName: "FileSpreadsheet"
+  },
+  {
+    id: "material",
+    title: "Material Selection & Procurement",
+    description:
+      "Material is procured against the approved grade with test certificates retained for the job file, so every part can be traced back to its heat and cast.",
+    checkpoints: [
+      "EN-19, EN-24, 42CrMo4, bronze and AMPCO alloys",
+      "Mill Test Certificates collected at receipt",
+      "Heat and cast identification recorded"
+    ],
+    iconName: "Layers"
+  },
+  {
+    id: "machining",
+    title: "CNC / BNC Machining & Fabrication",
+    description:
+      "Turning, milling, boring, and face machining run on programmes tuned to the material, alongside structural fabrication in our allied units at Howrah.",
+    checkpoints: [
+      "CNC turning, milling and BNC machining",
+      "Custom fabrication of precision components",
+      "Structural steel fabrication"
+    ],
+    iconName: "Cpu"
+  },
+  {
+    id: "finishing",
+    title: "Spline Matching & Surface Finishing",
+    description:
+      "Internal and external splines are matched, then surfaces are finished and ground to the specified condition.",
+    checkpoints: [
+      "Internal and external spline matching",
+      "Surface finishing and grinding",
+      "Fit checks against mating components"
+    ],
+    iconName: "Shuffle"
+  },
+  {
+    id: "inspection",
+    title: "Inspection & Dimensional Verification",
+    description:
+      "Every part is verified for dimensional accuracy before it leaves the shop, including CMM measurement through our allied unit where the drawing calls for it.",
+    checkpoints: [
+      "Coordinate Measuring Machine (CMM) verification",
+      "Dimensional accuracy checked against drawing",
+      "Non-conformances resolved before dispatch"
+    ],
+    iconName: "ScanLine"
+  },
+  {
+    id: "documentation",
+    title: "Documentation & Traceability",
+    description:
+      "The documentation pack is assembled to the standard international audits expect — certificates, traceability records, and serial-wise catalogues.",
+    checkpoints: [
+      "Material Test Certificates (MTC)",
+      "ISO, EN and ASTM compliance documentation",
+      "Serial number–wise illustrated catalogues"
+    ],
+    iconName: "ClipboardCheck"
+  },
+  {
+    id: "dispatch",
+    title: "Export Packaging & Dispatch",
+    description:
+      "Consignments are protected for sea and air freight, crated to ISPM-15, and staged for container loading with the export paperwork in place.",
+    checkpoints: [
+      "Rust-preventive coating and moisture protection",
+      "ISPM-15 treated seaworthy wooden crating",
+      "Container staging and export documentation support"
+    ],
+    iconName: "Truck"
+  },
+  {
+    id: "installation",
+    title: "Site Installation & Erection",
+    description:
+      "Where installation is in scope, experienced crews handle erection and commissioning support across steel, power, and petrochemical plants.",
+    checkpoints: [
+      "Structural steel erection",
+      "Tank, vessel and piping installation",
+      "Pan-India mechanical installation experience"
+    ],
+    iconName: "Wrench"
+  }
 ];

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Mail, Phone, MapPin, Send, CheckCircle, ShieldAlert, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle, Clock } from "lucide-react";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 
 export default function Contact() {
@@ -148,16 +148,6 @@ export default function Contact() {
                 </div>
 
               </div>
-            </div>
-
-            {/* Verification assurance label */}
-            <div className="mt-12 lg:mt-0 p-4 rounded-lg bg-brand-cream border border-zinc-200 max-w-sm flex gap-3 shadow-sm">
-              <div className="text-brand-yellow mt-0.5">
-                <ShieldAlert className="w-4 h-4" />
-              </div>
-              <p className="font-sans text-[10px] text-zinc-500 leading-normal">
-                All uploaded blueprints, technical specifications, and proprietary part geometries remain audited under strict NDA safeguards.
-              </p>
             </div>
 
           </div>

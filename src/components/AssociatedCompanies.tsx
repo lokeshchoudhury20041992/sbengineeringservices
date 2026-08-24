@@ -1,61 +1,6 @@
 import React, { useState } from "react";
-
-type PartnerLogo = {
-  name: string;
-  shortName: string;
-  sector: string;
-  logoUrl: string;
-  logoClassName?: string;
-  darkCard?: boolean;
-};
-
-const partnerLogos: PartnerLogo[] = [
-  {
-    name: "Oil and Natural Gas Corporation",
-    shortName: "ONGC",
-    sector: "Energy",
-    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/9/9a/ONGC_Logo.svg"
-  },
-  {
-    name: "Hindustan Petroleum Corporation Limited",
-    shortName: "HPCL",
-    sector: "Refining",
-    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/a/a8/Hindustan_Petroleum_logo.svg"
-  },
-  {
-    name: "Bharat Petroleum Corporation Limited",
-    shortName: "BPCL",
-    sector: "Petroleum",
-    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7c/Bharat_Petroleum_logo.svg"
-  },
-  {
-    name: "L&T Electrical & Automation",
-    shortName: "L&T E&A",
-    sector: "Automation",
-    logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM4Bq6gd0PD8gfoDfqhdAYiCVqYIKhuu_pnA&s",
-    logoClassName: "h-8 w-32"
-  },
-  {
-    name: "Jindal Steel & Power",
-    shortName: "Jindal Steel",
-    sector: "Steel",
-    logoUrl: "https://www.jindalsteel.in/images/logo/jindal-steel-logo-black.svg",
-    logoClassName: "h-9 w-36"
-  },
-  {
-    name: "Steel Authority of India Limited",
-    shortName: "SAIL",
-    sector: "Steel",
-    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1f/SAIL_Logo.svg"
-  },
-  {
-    name: "Simplex Infrastructures Limited",
-    shortName: "Simplex",
-    sector: "Infrastructure",
-    logoUrl: "https://www.simplexinfra.com/images/simplex-logo.png",
-    logoClassName: "h-10 w-36"
-  }
-];
+import { partnerLogos } from "../data";
+import { PartnerLogo } from "../types";
 
 const LogoCard = ({ partner }: { partner: PartnerLogo }) => {
   const [hasImageError, setHasImageError] = useState(false);

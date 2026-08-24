@@ -1,5 +1,7 @@
 import React from "react";
 import { companyOverview } from "../data";
+import { companyPages, homeSections } from "../site";
+import { Link } from "../router";
 import { ChevronUp, ShieldAlert } from "lucide-react";
 import logo from "../assets/logo.webp";
 
@@ -91,6 +93,45 @@ export default function Footer() {
               </div>
             </div>
 
+          </div>
+
+          {/* Sitemap interlinks */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 border-t border-zinc-900/60 pt-8 mb-10">
+            <div className="space-y-4">
+              <h4 className="font-sans text-xs font-bold text-white uppercase tracking-wider">
+                Company Pages
+              </h4>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5">
+                {companyPages.map((page) => (
+                  <li key={page.href}>
+                    <Link
+                      to={page.href}
+                      className="font-sans text-[11px] text-zinc-400 hover:text-brand-yellow transition-colors duration-200"
+                    >
+                      {page.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="space-y-4">
+              <h4 className="font-sans text-xs font-bold text-white uppercase tracking-wider">
+                Explore The Site
+              </h4>
+              <ul className="grid grid-cols-2 gap-x-6 gap-y-2.5">
+                {homeSections.map((section) => (
+                  <li key={section.href}>
+                    <Link
+                      to={section.href}
+                      className="font-sans text-[11px] text-zinc-400 hover:text-brand-yellow transition-colors duration-200"
+                    >
+                      {section.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* Footnote copyright */}

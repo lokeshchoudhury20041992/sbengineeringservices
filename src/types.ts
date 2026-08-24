@@ -41,3 +41,28 @@ export interface CompanyStat {
   value: string;
   label: string;
 }
+
+export interface PartnerLogo {
+  name: string;
+  shortName: string;
+  sector: string;
+  logoUrl: string;
+  logoClassName?: string;
+  darkCard?: boolean;
+}
+
+export interface IndustrySector {
+  id: string;
+  name: string;
+  iconName: string;
+  summary: string;
+  scope: string[];
+}
+
+export interface ProcessStep {
+  id: string;
+  title: string;
+  description: string;
+  checkpoints: string[];
+  iconName: string;
+}
