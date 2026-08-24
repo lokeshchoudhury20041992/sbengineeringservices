@@ -1,7 +1,7 @@
 import React from "react";
 import { jointVentures, technicalDirector } from "../data";
 import { useScrollReveal } from "../hooks/useScrollReveal";
-import { MapPin, Check, Briefcase, Network, ShieldCheck, GraduationCap, Award, CheckCircle } from "lucide-react";
+import { MapPin, Check, Briefcase, Network, ShieldCheck, GraduationCap, Award, CheckCircle, Phone, Mail } from "lucide-react";
 
 export default function JointVentures() {
   const [revealRef, isVisible] = useScrollReveal();
@@ -47,6 +47,20 @@ export default function JointVentures() {
               <h3 className="font-sans font-black text-xl sm:text-2xl text-white uppercase tracking-tight mt-4 leading-tight">
                 {technicalDirector.name}
               </h3>
+
+              {/* Post-nominals and memberships */}
+              {technicalDirector.qualifications && (
+                <div className="flex flex-wrap gap-1.5 mt-3">
+                  {technicalDirector.qualifications.map((qualification) => (
+                    <span
+                      key={qualification}
+                      className="font-mono text-[8px] uppercase tracking-widest text-zinc-300 font-bold bg-white/5 border border-white/10 px-2.5 py-1 rounded-full"
+                    >
+                      {qualification}
+                    </span>
+                  ))}
+                </div>
+              )}
 
               <p className="font-sans text-[11px] sm:text-xs text-zinc-400 leading-relaxed mt-3 max-w-md">
                 Directs engineering oversight, technical vetting, and quality assurance across every alliance workshop in our network — an in-house directorship, not an alliance partner.
@@ -121,6 +135,67 @@ export default function JointVentures() {
               </div>
             </div>
 
+          </div>
+
+          {/* Direct contact */}
+          <div className="relative border-t border-white/10 px-6 sm:px-10 py-6 sm:py-7 grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-8">
+            <div className="flex items-start gap-3.5">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-brand-yellow">
+                <MapPin className="w-4 h-4" />
+              </div>
+              <div className="min-w-0">
+                <span className="font-mono text-[8px] uppercase tracking-widest text-zinc-500 block font-bold">
+                  Address
+                </span>
+                <p className="font-sans text-[11px] text-zinc-300 mt-1 leading-relaxed">
+                  {technicalDirector.address}
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3.5">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-brand-yellow">
+                <Phone className="w-4 h-4" />
+              </div>
+              <div className="min-w-0">
+                <span className="font-mono text-[8px] uppercase tracking-widest text-zinc-500 block font-bold">
+                  Mobile
+                </span>
+                <div className="flex flex-col gap-0.5 mt-1">
+                  {(technicalDirector.phones ?? []).map((phone) => (
+                    <a
+                      key={phone}
+                      href={`tel:${phone.replace(/\s/g, "")}`}
+                      className="font-sans text-[11px] text-zinc-300 hover:text-brand-yellow transition-colors duration-200 whitespace-nowrap"
+                    >
+                      {phone}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3.5">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-brand-yellow">
+                <Mail className="w-4 h-4" />
+              </div>
+              <div className="min-w-0">
+                <span className="font-mono text-[8px] uppercase tracking-widest text-zinc-500 block font-bold">
+                  E-mail
+                </span>
+                <div className="flex flex-col gap-0.5 mt-1">
+                  {(technicalDirector.emails ?? []).map((email) => (
+                    <a
+                      key={email}
+                      href={`mailto:${email}`}
+                      className="font-sans text-[11px] text-zinc-300 hover:text-brand-yellow transition-colors duration-200 break-words"
+                    >
+                      {email}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 

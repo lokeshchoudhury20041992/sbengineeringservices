@@ -12,6 +12,11 @@ export interface LeadershipMember {
   experience: string;
   expertise: string[];
   additional?: string;
+  /** Post-nominals and memberships, as printed on the business card. */
+  qualifications?: string[];
+  address?: string;
+  phones?: string[];
+  emails?: string[];
 }
 
 export interface JointVenture {

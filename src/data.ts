@@ -81,6 +81,10 @@ export const technicalDirector: LeadershipMember = {
   role: "Technical Director",
   credentials: "C Eng, B.E. (Mech) — Jadavpur University, Kolkata",
   experience: "40+ Years in Steel, Power & Petrochemical Plants",
+  qualifications: ["BME-JU", "TQM-Japan", "Chartered Mech. Engineer — IE", "FIE — IE"],
+  address: "P-25, Senhati Colony, Behala, Kolkata - 700 034",
+  phones: ["+91 98301 08760", "+91 90513 01832"],
+  emails: ["swapan_calcutta@yahoo.co.in", "swapan56kol@gmail.com"],
   expertise: [
     "Mechanical fabrication and installation activities pan-India across steel, power, and petrochemical plants — piping, structures, tanks, and vessels",
     "Specialist in CNC/BNC machining and structural steel",

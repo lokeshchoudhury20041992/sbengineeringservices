@@ -6,8 +6,10 @@ import {
   ExternalLink,
   FileText,
   Image as ImageIcon,
+  Mail,
   Maximize2,
   MapPin,
+  Phone,
   Target
 } from "lucide-react";
 import PageHero from "../components/PageHero";
@@ -269,6 +271,21 @@ export default function Profile() {
                 <h3 className="font-sans font-black text-2xl sm:text-3xl text-white uppercase tracking-tight mt-2 leading-tight">
                   {technicalDirector.name}
                 </h3>
+
+                {/* Post-nominals and memberships */}
+                {technicalDirector.qualifications && (
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    {technicalDirector.qualifications.map((qualification) => (
+                      <span
+                        key={qualification}
+                        className="font-mono text-[9px] uppercase tracking-widest text-zinc-300 font-bold bg-brand-dark-light border border-zinc-800 px-3 py-1.5 rounded-full"
+                      >
+                        {qualification}
+                      </span>
+                    ))}
+                  </div>
+                )}
+
                 <div className="mt-6 space-y-4">
                   <div className="border-t border-zinc-800 pt-3">
                     <span className="font-mono text-[9px] uppercase tracking-widest text-zinc-500 block font-bold">
@@ -303,6 +320,61 @@ export default function Profile() {
                     </li>
                   ))}
                 </ul>
+              </div>
+            </div>
+
+            {/* Direct contact */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mt-10 pt-8 border-t border-zinc-800">
+              <div className="flex gap-3">
+                <MapPin className="w-4 h-4 text-brand-yellow shrink-0 mt-0.5" />
+                <div className="min-w-0">
+                  <span className="font-mono text-[9px] uppercase tracking-widest text-zinc-500 block font-bold">
+                    Address
+                  </span>
+                  <p className="font-sans text-xs text-zinc-300 mt-1 leading-relaxed">
+                    {technicalDirector.address}
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-3">
+                <Phone className="w-4 h-4 text-brand-yellow shrink-0 mt-0.5" />
+                <div className="min-w-0">
+                  <span className="font-mono text-[9px] uppercase tracking-widest text-zinc-500 block font-bold">
+                    Mobile
+                  </span>
+                  <div className="flex flex-col gap-0.5 mt-1">
+                    {(technicalDirector.phones ?? []).map((phone) => (
+                      <a
+                        key={phone}
+                        href={`tel:${phone.replace(/\s/g, "")}`}
+                        className="font-sans text-xs text-zinc-300 hover:text-brand-yellow transition-colors duration-200 whitespace-nowrap"
+                      >
+                        {phone}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex gap-3">
+                <Mail className="w-4 h-4 text-brand-yellow shrink-0 mt-0.5" />
+                <div className="min-w-0">
+                  <span className="font-mono text-[9px] uppercase tracking-widest text-zinc-500 block font-bold">
+                    E-mail
+                  </span>
+                  <div className="flex flex-col gap-0.5 mt-1">
+                    {(technicalDirector.emails ?? []).map((email) => (
+                      <a
+                        key={email}
+                        href={`mailto:${email}`}
+                        className="font-sans text-xs text-zinc-300 hover:text-brand-yellow transition-colors duration-200 break-words"
+                      >
+                        {email}
+                      </a>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
