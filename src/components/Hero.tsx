@@ -90,10 +90,10 @@ export default function Hero() {
                   </span>
                   <div className="font-sans text-sm font-bold text-white mt-0.5 flex flex-wrap items-center gap-x-1.5">
                     <a
-                      href="tel:+919830108760"
+                      href="tel:+919051301832"
                       className="whitespace-nowrap hover:text-brand-yellow transition-colors duration-200"
                     >
-                      +91 98301 08760
+                      +91 90513 01832
                     </a>
                     <span className="text-zinc-600" aria-hidden="true">/</span>
                     <a
@@ -108,7 +108,7 @@ export default function Hero() {
 
               {/* Mail coordinate */}
               <a
-                href="mailto:sbengineeringproject@gmail.com"
+                href="mailto:swapan_calcutta@yahoo.co.in"
                 className="group flex items-center gap-3 w-full sm:w-auto bg-brand-dark-light/70 border border-zinc-800 hover:border-zinc-600 rounded-xl px-4 py-3 transition-colors duration-200"
               >
                 <span className="w-9 h-9 shrink-0 rounded-lg bg-brand-yellow/10 border border-brand-yellow/20 flex items-center justify-center">
@@ -119,7 +119,7 @@ export default function Hero() {
                     Email Us
                   </span>
                   <span className="font-sans text-sm font-bold text-white mt-0.5 block break-words group-hover:text-brand-yellow transition-colors duration-200">
-                    sbengineeringproject@gmail.com
+                    swapan_calcutta@yahoo.co.in
                   </span>
                 </div>
               </a>
