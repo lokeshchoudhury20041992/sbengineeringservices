@@ -107,8 +107,7 @@ export default function Hero() {
               </div>
 
               {/* Mail coordinate */}
-              <a
-                href="mailto:swapan_calcutta@yahoo.co.in"
+              <div
                 className="group flex items-center gap-3 w-full sm:w-auto bg-brand-dark-light/70 border border-zinc-800 hover:border-zinc-600 rounded-xl px-4 py-3 transition-colors duration-200"
               >
                 <span className="w-9 h-9 shrink-0 rounded-lg bg-brand-yellow/10 border border-brand-yellow/20 flex items-center justify-center">
@@ -118,11 +117,22 @@ export default function Hero() {
                   <span className="font-mono text-[8px] uppercase tracking-widest text-zinc-500 block font-bold">
                     Email Us
                   </span>
-                  <span className="font-sans text-sm font-bold text-white mt-0.5 block break-words group-hover:text-brand-yellow transition-colors duration-200">
-                    swapan_calcutta@yahoo.co.in
-                  </span>
+                  <div className="font-sans text-sm font-bold text-white mt-0.5 flex flex-col gap-0.5">
+                    <a
+                      href="mailto:swapan_calcutta@yahoo.co.in"
+                      className="break-words hover:text-brand-yellow transition-colors duration-200"
+                    >
+                      swapan_calcutta@yahoo.co.in
+                    </a>
+                    <a
+                      href="mailto:sbengineeringproject@gmail.com"
+                      className="break-words hover:text-brand-yellow transition-colors duration-200"
+                    >
+                      sbengineeringproject@gmail.com
+                    </a>
+                  </div>
                 </div>
-              </a>
+              </div>
             </div>
 
             <p className="font-sans text-sm sm:text-base text-zinc-400 max-w-xl leading-relaxed">
