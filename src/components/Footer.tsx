@@ -87,8 +87,17 @@ export default function Footer() {
                   <p className="mt-0.5">Benaras Road, Near Kona High School, Howrah - 14, India</p>
                 </div>
                 <div className="pt-1 flex flex-col gap-1 font-mono text-[10px] text-zinc-500 border-t border-zinc-900/60 mt-2">
-                  <div>PH: +91 98301 08760 / +91 85998 82965</div>
-                  <div>EM: <a href="mailto:sbengineeringproject@gmail.com" className="hover:text-brand-yellow transition underline">sbengineeringproject@gmail.com</a></div>
+                  <span className="text-brand-yellow">Call Direct</span>
+                  <div>
+                    <a href="tel:+919051301832" className="hover:text-brand-yellow transition underline">+91 90513 01832</a>
+                    <span className="px-1">/</span>
+                    <a href="tel:+918599882965" className="hover:text-brand-yellow transition underline">+91 85998 82965</a>
+                  </div>
+                  <span className="text-brand-yellow mt-1">Email Us</span>
+                  <div className="flex flex-col gap-0.5">
+                    <a href="mailto:swapan_calcutta@yahoo.co.in" className="hover:text-brand-yellow transition underline">swapan_calcutta@yahoo.co.in</a>
+                    <a href="mailto:sbengineeringproject@gmail.com" className="hover:text-brand-yellow transition underline">sbengineeringproject@gmail.com</a>
+                  </div>
                 </div>
               </div>
             </div>
