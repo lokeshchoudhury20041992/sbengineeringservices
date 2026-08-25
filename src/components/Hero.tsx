@@ -90,17 +90,17 @@ export default function Hero() {
                   </span>
                   <div className="font-sans text-sm font-bold text-white mt-0.5 flex flex-wrap items-center gap-x-1.5">
                     <a
+                      href="tel:+919830108760"
+                      className="whitespace-nowrap hover:text-brand-yellow transition-colors duration-200"
+                    >
+                      +91 98301 08760
+                    </a>
+                    <span className="text-zinc-600" aria-hidden="true">/</span>
+                    <a
                       href="tel:+919051301832"
                       className="whitespace-nowrap hover:text-brand-yellow transition-colors duration-200"
                     >
                       +91 90513 01832
-                    </a>
-                    <span className="text-zinc-600" aria-hidden="true">/</span>
-                    <a
-                      href="tel:+918599882965"
-                      className="whitespace-nowrap hover:text-brand-yellow transition-colors duration-200"
-                    >
-                      +91 85998 82965
                     </a>
                   </div>
                 </div>
